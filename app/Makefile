@@ -6,18 +6,17 @@
 #    By: gstiedem <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/14 11:47:14 by gstiedem          #+#    #+#              #
-#    Updated: 2019/04/21 12:01:38 by gstiedem         ###   ########.fr        #
+#    Updated: 2019/05/26 18:09:32 by gstiedem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+all:
 
-NAME:=$(PATH)checker
-PATH:=../
-SRCDIR:=src
+CHECKER := checker
+PUSH_SWAP := push_swap
 UTILDIR:=util
 OBJDIR:=obj
-INCLUDE:=-Iinclude
-SRC:=$(addprefix $(SRCDIR)/,\
-	)
+SRC:=$(addprefix $(CHECKER)/,\
+	main.c)
 UTIL:=$(addprefix $(UTILDIR)/,\
 	)
 OBJ:=$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRC))
@@ -26,6 +25,9 @@ LIB:=
 LIBPATH:=
 CC:=gcc
 CFLAGS:=-Wall -Wextra -Werror
+INCL_DIR := ../include
+INCLUDE := $(INCL_DIR)/push_swap.h
+INC_FLAG := -I$(INCL_DIR)
 
 all: $(NAME)
 

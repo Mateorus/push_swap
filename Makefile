@@ -6,19 +6,15 @@
 #    By: gstiedem <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/14 11:47:14 by gstiedem          #+#    #+#              #
-#    Updated: 2019/04/21 15:18:28 by gstiedem         ###   ########.fr        #
+#    Updated: 2019/05/26 18:11:47 by gstiedem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PUSH_SWAP:=push_swap
-CHECKER:=checker
-APP_DIR:=app
-NAME:=$(addprefix $(APP_DIR)/, $(PUSH_SWAP) $(CHECKER))
-LIB_FT:=libft
-GNL:=gnl
-LIB_DIR:=lib
-LIBS:=$(addprefix $(LIB_DIR)/, $(LIB_FT) $(GNL))
-.PHONY:$(NAME) all $(LIBS) clean fclean re db
+NAME := app
+LIB_DIR := lib
+LIB_FT := libft
+LIBS := $(addprefix $(LIB_DIR)/, $(LIB_FT))
+.PHONY: $(LIBS) $(NAME) all clean fclean
 
 all: $(NAME)
 
@@ -33,5 +29,3 @@ clean: $(LIBS) $(NAME)
 fclean: $(LIBS) $(NAME)
 
 re: fclean all
-
-$(LIB_DIR)/$(GNL): $(LIB_DIR)/$(LIB_FT)

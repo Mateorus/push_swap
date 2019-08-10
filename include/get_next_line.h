@@ -6,7 +6,7 @@
 /*   By: gstiedem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 20:03:08 by gstiedem          #+#    #+#             */
-/*   Updated: 2019/04/21 16:43:27 by gstiedem         ###   ########.fr       */
+/*   Updated: 2019/05/22 15:17:40 by gstiedem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include "libft.h"
 
-# define BUFF_SIZE 100000
+# define BUFF_SIZE 1028
 
 typedef struct	s_fdlst
 {

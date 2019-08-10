@@ -6,7 +6,7 @@
 #    By: gstiedem <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 15:33:49 by gstiedem          #+#    #+#              #
-#    Updated: 2019/04/21 16:45:22 by gstiedem         ###   ########.fr        #
+#    Updated: 2019/05/26 18:06:46 by gstiedem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,14 +33,14 @@ INC_FLAG := -I$(INCL_DIR)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(INCLUDE)
-	@ar -rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+	ar -rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
